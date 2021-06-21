@@ -1,0 +1,1 @@
+say armor stand editor activated
