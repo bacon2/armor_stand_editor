@@ -1,7 +1,7 @@
 execute at @e[tag=miniblock_a] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1}]}
 execute as @e[tag=miniblock_b] at @e[tag=miniblock_a] run data modify entity @s data set from entity @e[type=item, limit=1, sort=nearest, distance=..1] Item
 execute at @e[tag=miniblock_a] run kill @e[type=item, limit=1, sort=nearest, distance=..1]
-execute as @e[tag=miniblock_b] at @s run summon armor_stand ~ ~-0.32 ~ {Invisible:1b, Marker:1b, Small:1b, Pose:{RightArm:[345.0f, 45.0f, 0.0f]}}
+execute as @e[tag=miniblock_b] at @s run summon armor_stand ~ ~-0.32 ~ {Invisible:1b, Marker:1b, Small:1b, Tags:["miniblock"], Pose:{RightArm:[345.0f, 45.0f, 0.0f]}}
 execute as @e[tag=miniblock_b] at @s run data modify entity @e[type=armor_stand, sort=nearest, limit=1] HandItems[0] set from entity @s data
 tag @e[tag=miniblock_a] add miniblock_c
 tag @e[tag=miniblock_b] add miniblock_d

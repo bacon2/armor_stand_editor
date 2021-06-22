@@ -9,7 +9,7 @@ execute at @e[tag=miniblock_k] run summon marker ~ ~1 ~ {Tags:["miniblock_i"]}
 execute at @e[tag=miniblock_l] run summon marker ~ ~0.185 ~ {Tags:["miniblock_j"]}
 kill @e[tag=miniblock_k]
 kill @e[tag=miniblock_l]
-execute as @e[tag=miniblock, nbt=!{HandItems:[{Count:1b},{}]}] run kill @s
+kill @e[tag=miniblock, nbt=!{HandItems:[{Count:1b}]}]
 scoreboard players add current_y mb_dimensions 1
 scoreboard players set current_x mb_dimensions 0
 execute if score current_y mb_dimensions < Y mb_dimensions run function armor_stand_editor:copy_plane_smaller
